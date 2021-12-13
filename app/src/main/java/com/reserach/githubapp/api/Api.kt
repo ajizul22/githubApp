@@ -10,7 +10,7 @@ import retrofit2.http.Query
 
 interface Api {
     @GET("search/users")
-    @Headers("Authorization: token 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")
+    @Headers("Authorization: token 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")
     fun getUsersBySearch(
         @Query("q") query: String,
         @Query("per_page") items: Int,
@@ -18,13 +18,13 @@ interface Api {
     ): Call<UserResponse>
 
     @GET("users")
-    @Headers("Authorization: token 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")
+    @Headers("Authorization: token ghp_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")
     fun getUsers(
         @Query("per_page") items: Int
     ): Call<ArrayList<User>>
 
     @GET("users/{username}")
-    @Headers("Authorization: token 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")
+    @Headers("Authorization: token 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")
     fun getUserDetail(
         @Path("username") username: String
     ): Call<User>
