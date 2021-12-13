@@ -26,8 +26,10 @@ class MainViewModel : ViewModel() {
                     call: Call<UserResponse>,
                     response: Response<UserResponse>
                 ) {
-                    if (response.isSuccessful) {
-                        listUsername.postValue(response.body()?.items)
+                    when {
+                        response.code() == 200 -> listUsername.postValue(response.body()?.items)
+                        response.code() == 401 -> errorMessage.postValue("Unauthorized")
+                        response.code() == 403 -> errorMessage.postValue("Forbidden")
                     }
                 }
 

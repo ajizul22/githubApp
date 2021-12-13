@@ -124,6 +124,7 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
 
         viewModel.errorMessage.observe(this, Observer {
             if (it != null) {
+                showLoading(false)
                 showDialogThree(it.toString())
             }
         })
@@ -169,8 +170,6 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
         dialog.show()
 
         rootView.tvErrorMessage.text = text
-
-        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.setCanceledOnTouchOutside(true)
 
     }
