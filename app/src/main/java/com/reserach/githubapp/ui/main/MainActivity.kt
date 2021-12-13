@@ -57,8 +57,14 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
             swipeRefresh.isRefreshing = false
             etQuery.text = null
 
+            etQuery.setOnClickListener {
+
+            }
+
             btnSearch.setOnClickListener {
                 searchUser(true)
+                tv1.visibility = View.GONE
+                tv2.visibility = View.GONE
             }
 
             // RECYCLERVIEW
@@ -92,6 +98,8 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
             // set enter key on search
             etQuery.setOnKeyListener { view, i, keyEvent ->
                 if (keyEvent.action == KeyEvent.ACTION_DOWN && i == KeyEvent.KEYCODE_ENTER) {
+                    tv1.visibility = View.GONE
+                    tv2.visibility = View.GONE
                     searchUser(true)
                     return@setOnKeyListener true
                 }
@@ -158,6 +166,8 @@ class MainActivity : AppCompatActivity(), SwipeRefreshLayout.OnRefreshListener {
     override fun onRefresh() {
         adapter.clear()
         page = 1
+        bind.tv1.visibility = View.VISIBLE
+        bind.tv2.visibility = View.VISIBLE
         initComponent()
     }
 

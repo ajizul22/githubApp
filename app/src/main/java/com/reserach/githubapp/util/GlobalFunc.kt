@@ -17,9 +17,7 @@ class GlobalFunc {
 
         // Endpoints
         const val BASE_URL = "https://api.github.com/"
-        const val TOKEN_ACCESS = "Authorization: token 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"
-        const val POSTS_URL = "posts"
-
+        const val TOKEN_ACCESS = "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"
     }
 
     fun FORMAT_DATE_DD_MMM_YYYY(inputDate: String): String? {
