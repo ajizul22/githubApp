@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_user"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/ly_created_at"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ly_username"/>
+
+        <TextView
+            android:id="@+id/ly_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:text="Username "
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toRightOf="@id/iv_user"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:text="-"
+            tools:text="ajizul22"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ly_username"
+            app:layout_constraintTop_toTopOf="@id/ly_username"
+            />
+
+        <TextView
+            android:id="@+id/ly_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:text="Id "
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="@id/ly_username"
+            app:layout_constraintRight_toRightOf="@id/ly_username"
+            app:layout_constraintTop_toBottomOf="@id/tv_username"/>
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:text="-"
+            android:textColor="@color/black"
+            tools:text="1230281273"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@id/ly_id"
+            app:layout_constraintTop_toTopOf="@id/ly_id"/>
+
+        <TextView
+            android:id="@+id/ly_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:text="Email "
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="@id/ly_username"
+            app:layout_constraintRight_toRightOf="@id/ly_username"
+            app:layout_constraintTop_toBottomOf="@id/ly_id"/>
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:text="-"
+            android:textColor="@color/black"
+            tools:text="mesutazizul@gmail.com"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ly_email"
+            app:layout_constraintTop_toTopOf="@id/ly_email"/>
+
+        <TextView
+            android:id="@+id/ly_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:text="Location "
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="@id/ly_username"
+            app:layout_constraintRight_toRightOf="@id/ly_username"
+            app:layout_constraintTop_toBottomOf="@id/tv_email"/>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            tools:text="Jakarta, Indonesia"
+            android:text="-"
+            android:textSize="14sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/ly_location"
+            app:layout_constraintTop_toTopOf="@id/ly_location"/>
+
+        <TextView
+            android:id="@+id/ly_created_at"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:text="Created At "
+            android:textSize="14sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/ly_username"
+            app:layout_constraintRight_toRightOf="@id/ly_username"
+            app:layout_constraintTop_toBottomOf="@id/tv_location"/>
+
+        <TextView
+            android:id="@+id/tv_created_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            tools:text="Jakarta, Indonesia"
+            android:textSize="14sp"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@id/ly_created_at"
+            app:layout_constraintTop_toTopOf="@id/ly_created_at"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
